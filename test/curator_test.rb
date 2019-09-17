@@ -115,4 +115,11 @@ class CuratorTest < Minitest::Test
 
     assert_equal [@photo_2, @photo_3, @photo_4], @curator.photographs_taken_by_artist_from("United States")
   end
+
+  # def test_it_can_find_photos_taken_between_certain_years
+  #   @curator.load_photographs('./data/photographs.csv')
+  #   @curator.load_artists('./data/artists.csv')
+  #
+  #   assert_equal [@photo_1], @curator.photographs_taken_between(1950..1965)
+  # end
 end
