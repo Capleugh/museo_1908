@@ -40,9 +40,13 @@ class Curator
     # photograph = @photographs.find_all do |photograph|
     #   photograph.artist_id == country
     end
-    artist_country.
+    
+    @photographs.find_all do |photograph|
+      photograph.artist_id ==
+        # require 'pry'; binding.pry
     # artist_country.find_all do |artist|
     #   artist.country == photograph.artist_id &&
-    # end
+
+    end
   end
 end
