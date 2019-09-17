@@ -36,17 +36,12 @@ class Curator
     #maybe you should iterate over artists and backtrack to photographs.
     artist_country = @artists.find_all do |artist|
       artist.country == country
-
-    # photograph = @photographs.find_all do |photograph|
-    #   photograph.artist_id == country
     end
-    
-    @photographs.find_all do |photograph|
-      photograph.artist_id ==
-        # require 'pry'; binding.pry
-    # artist_country.find_all do |artist|
-    #   artist.country == photograph.artist_id &&
-
-    end
+    artist_country.map do |artist|
+      artist.id
+      @photographs.find_all do |photograph|
+        photograph.artist_id == artist.id
+      end
+    end.flatten
   end
 end
