@@ -33,8 +33,16 @@ class Curator
   end
 
   def photographs_taken_by_artist_from(country)
-    photograph = @photographs.find_all do |photograph|
-      photograph.artist_id == country
-    end  
+    #maybe you should iterate over artists and backtrack to photographs.
+    artist_country = @artists.find_all do |artist|
+      artist.country == country
+
+    # photograph = @photographs.find_all do |photograph|
+    #   photograph.artist_id == country
+    end
+    artist_country.
+    # artist_country.find_all do |artist|
+    #   artist.country == photograph.artist_id &&
+    # end
   end
 end
